@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head><nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#achievements">Achievements</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<body>
+<header>
+    
+<header class="hero">
+    <p class="hero-label">WELCOME TO OUR PORTFOLIO</p>
+
+    <h1>Three Minds, One Vision</h1>
+
+    <p class="hero-description">
+        Three individuals, one team, and a shared vision.
+        We learn together, create together, and grow together.
+    </p>
+
+    <a href="#about" class="hero-button">Meet Our Team ↓</a>
+</header>
+</header>
+    <div> <section id="about">
+    <h2>About Our Team</h2>
+
+    <div>
+       
+<img src="sakshi.jpeg.jpeg" alt="Sakshi Labade" class="team-photo" onclick="openProfile('sakshi')">
+
+        <h3>Sakshi Labade</h3>
+        <p>School: School of Social Work</p>
+        <p>Class: MSW</p>
+        <p>Program Manager and Content Creator with an interest in student management, content development, and team coordination.</p>
+    </div>
+
+    <div>
+       
+<img src="shraddha.jpeg.jpeg" alt="Shraddha" class="team-photo" onclick="openProfile('shraddha')">
+        <h3>Shraddha Labade</h3>
+        <p>School: School of Business</p>
+        <p>Class: BBA</p>
+        <p>Interested in Business Analytics and Budget Management, with a focus on planning, analysis, and effective use of resources.</p>
+    </div>
+
+    <div>
+        
+<img src="shivam.jpg.jpeg" alt="Shivam" class="team-photo" onclick="openProfile('shivam')">
+        <h3>Shivam Labade</h3>
+        <p>School: School of Management</p>
+        <p>Class: Management</p>
+        <p>Interested in Student Coordination and Stakeholder Communication, with a focus on teamwork, coordination, and building effective communication.</p>
+    </div>
+</section>
+</body> 
+</html>
+<section id="skills">
+    <h2>Our Skills</h2> 
+
+    <ul>
+        <ul>
+    <li>Communication</li>
+    <li>Teamwork</li>
+    <li>Leadership</li>
+    <li>Student Management</li>
+    <li>Business Analytics</li>
+    <li>Stakeholder Communication</li>
+    <li>Content Creation</li>
+    <li>Problem Solving</li>
+    <li>HTML & CSS</li>
+</ul>
+    </ul>
+</section> 
+<<section id="achievements">
+    <h2>Our Achievements</h2>
+
+    <ul>
+        <li>Successfully completed team learning activities</li>
+        <li>Participated in different projects and assignments</li>
+        <li>Explored AI tools for learning and productivity</li>
+        <li>Developed teamwork and communication skills</li>
+        <li>Completed the team portfolio website using HTML and CSS</li>
+    </ul>
+</section>
+</section>
+<section id="projects">
+    <h2>Our Projects & Activities</h2>
+
+    <div>
+    <h3>Project 1 - Team Portfolio Website</h3>
+    <p>Created a team portfolio website using HTML and CSS to showcase our skills, achievements, and activities.</p>
+</div>
+
+<div>
+    <h3>Project 2 - AI Learning Activity</h3>
+    <p>Explored AI tools and learned how AI can help students with learning, research, writing, and study planning.</p>
+</div>
+
+<div>
+    <h3>Project 3 - Team Learning Activities</h3>
+    <p>Worked together as a team to complete assignments, interviews, discussions, and different learning activities.</p>
+</div>
+</section>
+<section id="contact">
+    <h2>Contact Us</h2>
+
+    
+<p>📧 Email: ourteam@example.com</p>
+<p>📍 Location: Pune, Maharashtra, India</p>
+<p>👥 Team: Sakshi, Shraddha &amp; Shivam</p>
+</section><footer>
+    <p>© 2026 Our Team Portfolio | Created with HTML & CSS</p>
+</footer>
+
+<!-- Team Member Profile Popup -->
+<div id="profile-popup" class="profile-popup">
+    <div class="popup-content">
+        <button class="close-popup" onclick="closeProfile()">&times;</button>
+
+        <h2 id="popup-name">Team Member</h2>
+        <p id="popup-school"></p>
+        <p id="popup-class"></p>
+        <p id="popup-description"></p>
+    </div>
+</div> 
+
+<script>
+    function openProfile(member) {
+        const popup = document.getElementById("profile-popup");
+
+        
+const profiles = {
+    sakshi: {
+        name: "Sakshi Labade",
+        school: "School: School of Social Work",
+        className: "Class: MSW",
+        description: "Program Manager and Content Creator with an interest in student management, content development, and team coordination."
+    },
+
+    shraddha: {
+        name: "Shraddha Labade",
+        school: "School: School of Business",
+        className: "Class: BBA",
+        description: "Interested in Business Analytics and Budget Management, with a focus on planning, analysis, and effective use of resources."
+    },
+
+    shivam: {
+        name: "Shivam Labade",
+        school: "School: School of Management",
+        className: "Class: Management",
+        description: "Interested in Student Coordination and Stakeholder Communication, with a focus on teamwork, coordination, and building effective communication."
+    }
+};
+
+        const person = profiles[member];
+
+        if (!person) return;
+
+        document.getElementById("popup-name").textContent = person.name;
+        document.getElementById("popup-school").textContent = person.school;
+        document.getElementById("popup-class").textContent = person.className;
+        document.getElementById("popup-description").textContent = person.description;
+
+        popup.style.display = "flex";
+    }
+
+    function closeProfile() {
+        document.getElementById("profile-popup").style.display = "none";
+    }
+
+    document.getElementById("profile-popup").addEventListener("click", function(event) {
+        if (event.target === this) {
+            closeProfile();
+        }
+    });
+</script>
+
+
